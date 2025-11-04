@@ -2,16 +2,26 @@
 #define KEEPER_H
 
 #include "conf.h"
-#include <fstream>
-#include <exception>
+#include <QString>
+#include <stdexcept>
 
 // Класс для хранения и управления объектами конференции
 class Keeper {
 public:
     Keeper();
     ~Keeper();
-    private:
-        
+
+    Keeper(const Keeper& other);
+
+    void add(Conf* item);
+    void remove(int index);
+    void displayAll() const;
+    void save_file(const QString& filename) const;
+    void load_file(const QString& filename);
+    // int getSize() const;
+    Conf* get(int index) const;
+private:
+    void clear();
     
 };
 

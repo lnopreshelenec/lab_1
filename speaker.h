@@ -2,32 +2,32 @@
 #define SPEAK_H
 
 #include "conf.h"
-#include <iostream>
-#include <string>
-#include <string>
-using namespace std; 
-
 
 
 class Speaker : public Conf{
     public:
     Speaker();
-    ~Speaker() override; 
-    void set_name(const string& name);
-    void set_vuz(const string& vuz);
-    void set_report(const string& report);
-    void set_annotacion(const string& annotacion);
+    ~Speaker() ;
+    Speaker(const QString& name, const QString& vuz, const QString& report, const QString& annotacion);
+    Speaker(const Speaker& other);
 
-    string get_name() const;
-    string get_vuz()const;
-    string get_report()const;
-    string grt_annotacion()const;
+    // void set_name(const string& name);
+    void set_vuz(const QString& vuz);
+    void set_report(const QString& report);
+    void set_annotacion(const QString& annotacion);
+
+    QString get_name() const;
+    QString get_vuz()const;
+    QString get_report()const;
+    QString grt_annotacion()const;
+
+    void display() const override;
 
     private:
-        string  name;
-        string vuz;
-        string report;
-        string annotacion;
+        // string nameT;
+        QString organization;
+        QString reportT;
+        QString annotationT;
 
-}
+};
 #endif
