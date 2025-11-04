@@ -11,13 +11,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     // В конструкторе MainWindow после ui->setupUi(this);
-    connect(ui->addSpeaker, &QPushButton::clicked, this, &MainWindow::on_addSpeaker_clicked);
-    connect(ui->addAdmin, &QPushButton::clicked, this, &MainWindow::on_addAdmin_clicked);
-    connect(ui->addProgram, &QPushButton::clicked, this, &MainWindow::on_addProgram_clicked);
-    connect(ui->removeItem, &QPushButton::clicked, this, &MainWindow::on_removeItem_clicked);
-    connect(ui->saveToFile, &QPushButton::clicked, this, &MainWindow::on_saveToFile_clicked);
-    connect(ui->loadFromFile, &QPushButton::clicked, this, &MainWindow::on_loadFromFile_clicked);
-    connect(ui->clearAll, &QPushButton::clicked, this, &MainWindow::on_clearAll_clicked);
+    // connect(ui->addSpeaker, &QPushButton::clicked, this, &MainWindow::on_addSpeaker_clicked);
+    // connect(ui->addAdmin, &QPushButton::clicked, this, &MainWindow::on_addAdmin_clicked);
+    // connect(ui->addProgram, &QPushButton::clicked, this, &MainWindow::on_addProgram_clicked);
+    // connect(ui->removeItem, &QPushButton::clicked, this, &MainWindow::on_removeItem_clicked);
+    // connect(ui->saveToFile, &QPushButton::clicked, this, &MainWindow::on_saveToFile_clicked);
+    // connect(ui->loadFromFile, &QPushButton::clicked, this, &MainWindow::on_loadFromFile_clicked);
+    // connect(ui->clearAll, &QPushButton::clicked, this, &MainWindow::on_clearAll_clicked);
         updateDisplay();
 }
 
@@ -155,8 +155,8 @@ void MainWindow::updateDisplay()
 void MainWindow::displaySpeakers()
 {
     ui->textBrowser->clear();
-    ui->textBrowser->append(" № | ФИО                 | Организация    | Доклад");
-    ui->textBrowser->append("───|─────────────────────|────────────────|─────────────────────────");
+    // ui->textBrowser->append(" № | ФИО                 | Организация    | Доклад");
+    // ui->textBrowser->append("───|─────────────────────|────────────────|─────────────────────────");
 
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);
@@ -171,14 +171,14 @@ void MainWindow::displaySpeakers()
 void MainWindow::displayAdmins()
 {
     ui->textBrowser_2->clear();
-    ui->textBrowser_2->append(" № | ФИО                 | Должность      | Ответственность");
-    ui->textBrowser_2->append("───|─────────────────────|────────────────|─────────────────────────");
+    // ui->textBrowser_2->append(" № | ФИО                 | Должность      | Ответственность");
+    // ui->textBrowser_2->append("───|─────────────────────|────────────────|─────────────────────────");
 
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);
         if (Admin* admin = dynamic_cast<Admin*>(item)) {
             // admin->display(i + 1);!!!!!
-            ui->textBrowser->append(admin->toString());
+            ui->textBrowser_2->append(admin->toString());
 
         }
     }
@@ -187,13 +187,13 @@ void MainWindow::displayAdmins()
 void MainWindow::displayPrograms()
 {
     ui->textBrowser_3->clear();
-    ui->textBrowser_3->append(" № | Наименование                  | День        | Время");
-    ui->textBrowser_3->append("───|───────────────────────────────|─────────────|──────");
+    // ui->textBrowser_3->append(" № | Наименование                  | День        | Время");
+    // ui->textBrowser_3->append("───|───────────────────────────────|─────────────|──────");
 
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);
         if (Program* program = dynamic_cast<Program*>(item)) {
-            ui->textBrowser->append(program->toString());
+            ui->textBrowser_3->append(program->toString());
             // program->display(i + 1);!!!!!
         }
     }
@@ -202,8 +202,8 @@ void MainWindow::displayPrograms()
 void MainWindow::displayAll()
 {
     ui->textBrowser_4->clear();
-    ui->textBrowser_4->append(" № | Тип        | Наименование");
-    ui->textBrowser_4->append("───|────────────|────────────────");
+    // ui->textBrowser_4->append(" № | Тип        | Наименование");
+    // ui->textBrowser_4->append("───|────────────|────────────────");
 
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);

@@ -98,8 +98,12 @@ void Keeper::load_file(const QString& filename) {
         if (line.isNull()) break;
 
         Conf* obj = createObjectFromString(line);
-        if (obj) {
+        if (obj!=nullptr) {
             add(obj);
+            // qDebug()<<"Pars str"<<obj->toString();
+        }else{
+
+            // qDebug() << "Invalid line format: "<<line;
         }
     }
 
@@ -112,27 +116,26 @@ Conf* Keeper::createObjectFromString(const QString& line) {
     if (parts.size() < 2) return nullptr;
 
     QString type = parts[0];
-
-    if (type == "SPEAKER" && parts.size() == 5) {
+    if (type.trimmed() == QString("SPEAKER").trimmed() && parts.size() == 5) {
         Speaker* speaker = new Speaker();
-        speaker->set_name(parts[1]);
-        speaker->set_vuz(parts[2]);
-        speaker->set_report(parts[3]);
-        speaker->set_annotacion(parts[4]);
+        speaker->set_name(parts[1].trimmed());
+        speaker->set_vuz(parts[2].trimmed());
+        speaker->set_report(parts[3].trimmed());
+        speaker->set_annotacion(parts[4].trimmed());
         return speaker;
     }
-    else if (type == "ADMIN" && parts.size() == 4) {
+    else if (type.trimmed() == QString("ADMIN").trimmed() && parts.size() == 4) {
         Admin* admin = new Admin();
-        admin->set_name(parts[1]);
-        admin->set_position(parts[2]);
-        admin->set_responsibility(parts[3]);
+        admin->set_name(parts[1].trimmed());
+        admin->set_position(parts[2].trimmed());
+        admin->set_responsibility(parts[3].trimmed());
         return admin;
     }
-    else if (type == "PROGRAM" && parts.size() == 4) {
+    else if (type.trimmed() == QString("PROGRAM").trimmed() && parts.size() == 4) {
         Program* program = new Program();
-        program->set_name(parts[1]);
-        program->set_day(parts[2]);
-        program->set_time(parts[3]);
+        program->set_name(parts[1].trimmed());
+        program->set_day(parts[2].trimmed());
+        program->set_time(parts[3].trimmed());
         return program;
     }
 
