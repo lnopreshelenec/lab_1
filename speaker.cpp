@@ -57,3 +57,8 @@ Speaker::Speaker(const QString& name, const QString& vuz, const QString& report,
 Speaker::~Speaker() {
     qDebug() << "Удаление выступающих: " << nameT << "\n";
 }
+
+Speaker::Speaker(){
+    qDebug()  << "Создание просто Speaker" <<"\n" ;
+
+}

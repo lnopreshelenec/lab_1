@@ -161,7 +161,7 @@ void MainWindow::displaySpeakers()
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);
         if (Speaker* speaker = dynamic_cast<Speaker*>(item)) {
-            speaker->display(i + 1);
+            // speaker->display(i + 1);!!!!!
             // Для отображения в textBrowser нужно добавить соответствующий метод
         }
     }
@@ -176,7 +176,7 @@ void MainWindow::displayAdmins()
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);
         if (Admin* admin = dynamic_cast<Admin*>(item)) {
-            admin->display(i + 1);
+            // admin->display(i + 1);!!!!!
         }
     }
 }
@@ -190,7 +190,7 @@ void MainWindow::displayPrograms()
     for (int i = 0; i < keeper.getSize(); ++i) {
         Conf* item = keeper.get(i);
         if (Program* program = dynamic_cast<Program*>(item)) {
-            program->display(i + 1);
+            // program->display(i + 1);!!!!!
         }
     }
 }

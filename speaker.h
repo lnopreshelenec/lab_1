@@ -21,7 +21,7 @@ class Speaker : public Conf{
     QString get_report()const;
     QString get_annotacion()const;
 
-    void display(int index) const override;
+    // void display(int index) const override;
 
     QString toString() const override;
     QString getType() const override { return "SPEAKER"; }

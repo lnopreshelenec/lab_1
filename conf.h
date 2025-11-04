@@ -10,7 +10,7 @@ class Conf{
         Conf();
         ~Conf();
 
-        virtual void display(int index) const = 0;
+        // virtual void display(int index) const = 0;
         virtual QString toString() const = 0;
          virtual QString getType() const = 0;
 
@@ -19,7 +19,6 @@ class Conf{
 
     protected:
         QString nameT;
-    private:
 
 };
 #endif

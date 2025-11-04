@@ -2,7 +2,7 @@
 #include "speaker.h"
 #include "admin.h"
 #include "programm.h"
-
+#include "conf.h"
 
 #include <QDebug>
 
@@ -47,7 +47,7 @@ void Keeper::displayAll() {
     for (int i = 0; i < data.len(); ++i) {
         Element<Conf*>* element = data.at(i);
         if (element && element->get_data()) {
-            element->get_data()->display(i + 1);
+            // element->get_data()->display(i + 1);!!!!!
         }
     }
 }

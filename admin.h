@@ -10,7 +10,7 @@ class Admin : public Conf {
         Admin();
         ~Admin();
 
-        void display(int index) const override;
+        // void display(int index) const override;
 
 
         QString toString() const override;
