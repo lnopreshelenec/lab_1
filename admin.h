@@ -1,16 +1,14 @@
-#ifndef CONF_H
-#define CONF_H
+#ifndef ADMIN_H
+#define ADMIN_H
 
 
 #include "conf.h"
 
 
-class Admin : public Conf{
+class Admin : public Conf {
     public:
         Admin();
         ~Admin();
-        Admin(const QString& name, const QString& position, const QString& responsibility);
-        Admin(const Adminr& other);
 
         void display() const override;
 
@@ -21,7 +19,7 @@ class Admin : public Conf{
         void set_responsibility(const QString& responsibility);
     private:
         // string fullName;
-        QString position;
-        QString responsibility;
+        QString positionT;
+        QString responsibilityT;
 };
 #endif

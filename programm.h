@@ -10,9 +10,6 @@ public:
      Program();
     ~Program();
 
-     Program(const QString& name, const QString& day, const QString& time);
-     Program(const Program& other);
-
      void display() const override;
 
      QString get_day() const;
@@ -22,8 +19,8 @@ public:
      void set_time(const QString& time);
 
 private:
-    QString day;
-    QString time;
+    QString dayT;
+    QString timeT;
 
 };
 #endif

@@ -16,10 +16,10 @@ class Speaker : public Conf{
     void set_report(const QString& report);
     void set_annotacion(const QString& annotacion);
 
-    QString get_name() const;
+    // QString get_name() const;
     QString get_vuz()const;
     QString get_report()const;
-    QString grt_annotacion()const;
+    QString get_annotacion()const;
 
     void display() const override;
 
