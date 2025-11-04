@@ -9,12 +9,21 @@ Program::~Program() {
     qDebug() << "Деструктор Program " << nameT;
 }
 
-void Program::display() const {
-    qDebug() << "Program:" << nameT;
-    qDebug() << "  Day:" << dayT;
-    qDebug() << "  Time:" << timeT;
-}
+// void Program::display() const {
+//     qDebug() << "Program:" << nameT;
+//     qDebug() << "  Day:" << dayT;
+//     qDebug() << "  Time:" << timeT;
+// }
+QString Program::toString() const {
+    int i;
+    QString str = QString("%1 | %2 | %3 | %4")
+    .arg(i++, 4)                      // %4d - номер шириной 4 символа
+        .arg(nameT, -25)                    // %-25s - название шириной 25
+        .arg(dayT, -12)                     // %-12s - день шириной 12
+        .arg(timeT, -8);                    // %-8s - время шириной 8
 
+    qDebug() << str;
+}
 
 QString Program::get_day() const { return dayT; }
 QString Program::get_time() const { return timeT; }

@@ -10,7 +10,12 @@ class Admin : public Conf {
         Admin();
         ~Admin();
 
-        void display() const override;
+        void display(int index) const override;
+
+
+        QString toString() const override;
+        QString getType() const override { return "ADMIN"; }
+
 
         QString get_position() const;
         QString get_responsibility() const;

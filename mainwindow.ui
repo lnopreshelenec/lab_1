@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -266,7 +266,7 @@
         <string>Аннотация</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="addSpeaker">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -495,7 +495,7 @@
         <string>Область ответственности</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="addAdmin">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -711,7 +711,7 @@
         <string>Время</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="addProgram">
        <property name="geometry">
         <rect>
          <x>20</x>
@@ -912,7 +912,7 @@
         <string/>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="removeItem">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -960,7 +960,7 @@
         <string>Работа с файлами</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_13">
+      <widget class="QPushButton" name="saveToFile">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -973,7 +973,7 @@
         <string>Сохранить в файл</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_15">
+      <widget class="QPushButton" name="loadFromFile">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -986,7 +986,7 @@
         <string>Загрузить из файла</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="QPushButton" name="clearAll">
        <property name="geometry">
         <rect>
          <x>10</x>

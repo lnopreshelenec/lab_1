@@ -10,13 +10,19 @@ public:
      Program();
     ~Program();
 
-     void display() const override;
+     void display(int index)  const override;
 
      QString get_day() const;
      QString get_time() const;
 
      void set_day(const QString& day);
      void set_time(const QString& time);
+
+
+     QString toString() const override;
+     QString getType() const override { return "PROGRAM"; }
+
+
 
 private:
     QString dayT;
