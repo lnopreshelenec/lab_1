@@ -6,22 +6,13 @@
 
 #include <QDebug>
 
-// void Keeper::displayAll()
-// {
-//     if(this->len()==0){
-//         qDebug()<<"Pass Keeper";
-//     }
-//     for(int i =0;i<this->len();++i){
-//         this->at(i)->get_data()->show();
-//     }
-// }
 Keeper::Keeper() {
-    qDebug() << "Keeper constructor";
+    qDebug() << "Keeper Конструктор";
 }
 
 Keeper::~Keeper() {
     clear();
-    qDebug() << "Keeper destructor";
+    qDebug() << "Keeper деструктор";
 }
 
 void Keeper::add(Conf* item) {
@@ -40,7 +31,7 @@ void Keeper::remove(int index) {
 
 void Keeper::displayAll() {
     if (data.len() == 0) {
-        qDebug() << "Keeper is empty";
+        qDebug() << "Keeper пустой";
         return;
     }
 
@@ -70,7 +61,7 @@ void Keeper::save_file(const QString& filename)  {
     }
 
     file.close();
-    qDebug() << "Data saved to file:" << filename;
+    qDebug() << "Загружео в файл:" << filename;
 }
 
 void Keeper::load_file(const QString& filename) {
@@ -102,13 +93,11 @@ void Keeper::load_file(const QString& filename) {
             add(obj);
             // qDebug()<<"Pars str"<<obj->toString();
         }else{
-
-            // qDebug() << "Invalid line format: "<<line;
         }
     }
 
     file.close();
-    qDebug() << "Data loaded from file:" << filename << "Items:" << data.len();
+    qDebug() << "Выгружено из файла:" << filename << "количество:" << data.len();
 }
 
 Conf* Keeper::createObjectFromString(const QString& line) {
@@ -170,12 +159,10 @@ QString Keeper::getAllFormatted()  {
     if (data.len() == 0) {
         return "Список пуст";
     }
-
     for (int i = 0; i < data.len(); ++i) {
         Element<Conf*>* element = data.at(i);
         if (element && element->get_data()) {
             result += QString("Элемент %1:\n").arg(i + 1);
-            // Для подробного вывода можно добавить специфичную логику
         }
     }
 

@@ -10,21 +10,14 @@ Admin::~Admin() {
     qDebug() << " Деструктор Admin" << nameT;
 }
 
-// void Admin::display() const {
-//     qDebug() << "Admin:" << nameT;
-//     qDebug() << "  Position:" << positionT;
-//     qDebug() << "  Responsibility:" << responsibilityT;
-// }
 
 QString Admin::toString() const {
     // int i;
     QString str = QString("%1 | %2 | %3 | %4")
-    .arg(getType())                      // %4d - номер шириной 4 символа
-        .arg(nameT, 40)                    // %-20s - имя шириной 20
-        .arg(positionT, 45)                // %-15s - должность шириной 15
-        .arg(responsibilityT, 35);         // %-25s - ответственность шириной 25
-
-    // qDebug() << str;
+    .arg(getType())
+        .arg(nameT, 40)
+        .arg(positionT, 45)
+        .arg(responsibilityT, 35);
     return str;
 }
 

@@ -9,7 +9,6 @@
 #include <QDebug>
 
 
-// Класс для хранения и управления объектами конференции
 class Keeper : List<Conf*>{
 public:
     Keeper();

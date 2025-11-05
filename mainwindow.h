@@ -6,6 +6,14 @@
 #include "speaker.h"
 #include "admin.h"
 #include "programm.h"
+#include <QMessageBox>
+#include <QFileDialog>
+#include <typeinfo>
+#include <typeindex>
+#include <QMainWindow>
+#include <QStandardItemModel>
+#include <QTableView>
+#include <QHeaderView>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

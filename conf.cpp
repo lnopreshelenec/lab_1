@@ -3,7 +3,7 @@
 
 
 
-Conf::Conf() /*: nameT("Unknown")*/ {
+Conf::Conf()  {
     qDebug() << "Конструктор Conf" << nameT;
 }
 Conf::~Conf() {

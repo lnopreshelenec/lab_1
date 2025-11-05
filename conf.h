@@ -10,9 +10,8 @@ class Conf{
         Conf();
         ~Conf();
 
-        // virtual void display(int index) const = 0;
         virtual QString toString() const = 0;
-         virtual QString getType() const = 0;
+        virtual QString getType() const = 0;
 
         QString get_name() const;
         void set_name(const QString& name);

@@ -10,7 +10,6 @@ public:
      Program();
     ~Program();
 
-     // void display(int index)  const override;
 
      QString get_day() const;
      QString get_time() const;

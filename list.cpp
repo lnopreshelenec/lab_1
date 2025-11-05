@@ -43,36 +43,6 @@ void List<T>::add(T var)
 
 template<class T>
 void List<T>::print(){
-    // Element<T> *curr = head;
-    // if(curr == 0){
-    //     qDebug()<<"pass"<<endl;
-    //     return;
-    // }
-    // char *c;
-    // if  ((type_index (typeid(curr->get_data())).hash_code()==type_index (typeid(c)).hash_code())){
-    //     while(curr->get_next()){
-    //         printf("data = %s, prev = %p, next = %p\n",curr->get_data(),(void*)curr->get_prev(),(void*)curr->get_next());
-    //         curr= curr->get_next();
-    //     }
-    //     printf("data = %s, prev = %p, next = %p\n",curr->get_data(),(void*)curr->get_prev(),(void*)curr->get_next());
-
-    // }else{
-    //     while(curr->get_next()){
-    //         qDebug()<<"data = ";
-    //         qDebug()<<curr->get_data()<<", ";
-    //         qDebug()<<"prev = ";
-    //         qDebug()<<(void*)curr->get_prev()<<", ";
-    //         qDebug()<<"next = ";
-    //         qDebug()<<(void*)curr->get_next()<<"\n";
-    //         // printf("data = %d, prev = %p, next = %p\n",curr->getData(),(void*)curr->getPrev(),(void*)curr->getNext());
-    //         curr= curr->get_next();
-    //     }
-
-    //     qDebug()<<"data = "<<curr->get_data()<<", ";
-    //     qDebug()<<"prev = "<<(void*)curr->get_prev()<<", ";
-    //     qDebug()<<"next = "<<(void*)curr->get_next()<<"\n";
-    // }
-    // printf("data = %d, prev = %p, next = %p\n",curr->getData(),(void*)curr->getPrev(),(void*)curr->getNext());
     Element<T> *curr = head;
     if(curr == nullptr){
         qDebug() << "List is empty";
