@@ -39,9 +39,9 @@ QString Speaker::toString()  const {
     i++;
     QString str = QString("%1 | %2 | %3 | %4 | %5")
     .arg(getType())                      // № шириной 3
-        .arg(nameT, 20)                    // ФИО шириной 20
-        .arg(organization, 15)             // Организация шириной 15
-        .arg(reportT, 25)                  // Доклад шириной 25
+        .arg(nameT, 30)                    // ФИО шириной 20
+        .arg(organization, 35)             // Организация шириной 15
+        .arg(reportT, 35)                  // Доклад шириной 25
         .arg(annotationT); // Аннотация (сокращенная)
 
     // qDebug() << str;
@@ -53,7 +53,7 @@ Speaker::Speaker(const QString& name, const QString& vuz, const QString& report,
       reportT(report),
       annotationT(annotation) {
     qDebug()  << "Создание Speaker" << name <<"\n" ;
-    // set_name(name);
+    set_name(name);
 }
 Speaker::~Speaker() {
     qDebug() << "Удаление выступающих: " << nameT << "\n";

@@ -20,9 +20,9 @@ QString Admin::toString() const {
     // int i;
     QString str = QString("%1 | %2 | %3 | %4")
     .arg(getType())                      // %4d - номер шириной 4 символа
-        .arg(nameT, 20)                    // %-20s - имя шириной 20
-        .arg(positionT, 15)                // %-15s - должность шириной 15
-        .arg(responsibilityT, 25);         // %-25s - ответственность шириной 25
+        .arg(nameT, 40)                    // %-20s - имя шириной 20
+        .arg(positionT, 45)                // %-15s - должность шириной 15
+        .arg(responsibilityT, 35);         // %-25s - ответственность шириной 25
 
     // qDebug() << str;
     return str;

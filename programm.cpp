@@ -18,9 +18,9 @@ QString Program::toString() const {
     int i;
     QString str = QString("%1 | %2 | %3 | %4")
     .arg(getType())                      // %4d - номер шириной 4 символа
-        .arg(nameT, 25)                    // %-25s - название шириной 25
-        .arg(dayT, 12)                     // %-12s - день шириной 12
-        .arg(timeT, 8);                    // %-8s - время шириной 8
+        .arg(nameT, 35)                    // %-25s - название шириной 25
+        .arg(dayT, 32)                     // %-12s - день шириной 12
+        .arg(timeT, 30);                    // %-8s - время шириной 8
 
     // qDebug() << str;
     return str;
